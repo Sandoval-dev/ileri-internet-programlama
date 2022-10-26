@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Deneme</p>
+    <p id="isim">Deneme2</p>
+    <p class="as">Osman Erdem</p>
+    <p class="as">Kılıç</p>
+    <h3 class="as">Başlık</h3>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        
+       
+        $("#isim").click(function(){
+            console.log("bana basıldı");
+        })
+
+        $("#isim").mouseenter(function(){
+            $(this).css("color","blue");
+            $(this).css("font-family","arial");
+            $(this).css("textDecoration","underline");
+
+        })
+
+        $("#isim").mouseleave(function(){
+            $(this).removeAttr("style");
+
+        })
+    </script>
+</body>
+</html>

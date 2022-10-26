@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+        #karakutu{
+            position: absolute;
+            width:200px;
+            height:200px;
+            background-color:rgb(0, 0, 0);
+            color:white;
+            left:150px;
+            top:150px;
+            
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <button id="tikla">Göster</button>
+    <button id="gizle">Gizle</button>
+  <div id="karakutu">Beyaz</div>
+  
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#karakutu").hide();
+        })
+        $("#tikla").click(function(){
+            $("#karakutu").fadeIn(5000);
+        })
+
+        $("#gizle").click(function(){
+            $("#karakutu").fadeOut(2000);
+        })
+      
+    </script>
+</body>
+</html>

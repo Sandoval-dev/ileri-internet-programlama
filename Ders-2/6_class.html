@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="baslik"></h1>
+    <p id="cikti"></p>
+
+    <script>
+        class sinif{
+            constructor(ad,soyad,yas){
+                this.ad=ad;
+                this.soyad=soyad;
+                this.yas=yas;
+            }
+
+            memleket_belirle(memleket){
+                this.memleket=memleket;
+            }
+            yazdir(){
+                document.getElementById("baslik").innerHTML=this.ad +" " + this.soyad;
+                document.getElementById("cikti").innerHTML=this.yas + " " + this.memleket;
+            }
+        }
+
+        kisi=new sinif("Osman","Kılıç",22);
+        kisi.memleket_belirle("Bursa");
+        kisi.yazdir();
+    </script>
+</body>
+</html>

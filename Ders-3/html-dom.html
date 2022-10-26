@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Deneme</p>
+    <p id="isim">Deneme2</p>
+    <p class="as">Osman Erdem</p>
+    <p class="as">Kılıç</p>
+    <h3 class="as">Başlık</h3>
+    <script>
+
+        let isim=document.getElementById("isim");
+        isim.innerHTML="Osman Erdem Kılıç";
+        let asds=document.getElementsByClassName("as");
+        
+        for (let i=0; i<asds.length; i++){
+           asds[i].style.color="red";
+        }
+        
+        Array.from(asds).forEach((as)=>{
+            as.style.color="green";
+        });
+
+        let paragraf=document.querySelectorAll("p.as");
+        
+        for (let i=0; i<paragraf.length; i++){
+            paragraf[i].style.textDecoration="underline";
+        }
+
+
+
+    </script>
+</body>
+</html>

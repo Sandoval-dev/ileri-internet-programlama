@@ -1,0 +1,49 @@
+<!-- Bir düğme 2 metin giriş alanından oluşan bir form hazrıla-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #yesil{
+            
+            
+            
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position:absolute;
+            bottom:0px; 
+            right:0px; 
+          
+            
+        }
+
+    </style>
+</head>
+<body>
+        <input type="text" name="username" id="bir" placeholder="adasd">
+        <br>
+        <input type="text" name="surname" id="iki" placeholder="Surname">
+        <br>
+        <button id="tikla">Gönder</button>
+
+    <div id="yesil"></div>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+         let a=$("#bir").val();
+        $("#tikla").dblclick(function(){
+            $("#yesil").animate({
+               top: a + "px",
+               left:  $("#iki").val() + "px",
+
+                
+    
+              })
+
+        });
+    </script>
+</body>
+</html>
